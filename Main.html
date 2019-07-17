@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALPHA FLASH</title>
+	<link rel="icon" type="image/png" href="Images/logo.png">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		
+		body {
+   background-image: url("Images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: 120%;
+   
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: all;
+    left: 10px;
+    
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+.w3-myfont {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+	</style>
+</head>
+
+
+<body>
+
+
+ <img src="Images/child.png" width="700" height="300" style = "position: absolute; left: 30%; top:-4%; "> 
+ 
+<img src = "Images/logo.png" width = "300" height="200" style = "position: absolute; left: 10%; top:5%;  ">
+
+ <iframe src="Music/Bgmusiic.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+
+	<div class="container"  style = "position: absolute; top:35%; left: 7%;">
+
+		 <div id="slideshow">
+   <div>
+     <img src="Images/One.png" style=" position: absolute; width: 90%; height: 700%; left: 5%;">
+   </div>
+   <div>
+     <img src="Images/Two.png" style=" position: absolute; width: 90%; height: 700%; left: 5%;">
+   </div>
+   <div>
+    <img src="Images/Three.png" style=" position: absolute; width: 90%; height: 700%; left: 5%;">
+   </div>
+
+   <div>
+    <img src="Images/giphy.gif" style=" position: absolute; width: 90%; height: 700%; left: 5%;">
+   </div>
+</div>
+ 
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle w3-myfont" type="button" data-toggle="dropdown" style="position: absolute; top:168px; right:350px; width: 25%; font-size:150%;" >LEARN ALPHABETS
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" style="position:absolute;top:210px; left:505px; width: 25%; background: #8fbc8f; font-size:150%;" >
+    <li class="w3-myfont"><a href="Uppercase.html">UPPERCASE</a></li>
+    <li class="w3-myfont"><a href="Lowercase.html">LOWERCASE</a></li>
+  </ul>
+</div>
+
+<a href ="Matchinggame.html">
+<button type="button" class="btn btn-danger w3-myfont" style="position: absolute; top:218px; right:68px; width: 25%; font-size:150%;" >TAKE A TEST</button>
+
+</a>
+  <div class="jumbotron" style=" position:absolute; top:500%; left:6%; width: 37%; height:160px; background: #ffd700; box-shadow: 10px 10px 5px grey;">
+  	 <img src = "Images/cards.png" width = "70" height="90" style = "position: absolute; left: 83%; top:5%;  ">
+      <img src = "Images/abc.png" width = "50" height="50" style = "position: absolute; left: 5%; top:70%;   ">
+  	<h3 class = " w3-myfont" style="position: absolute; left: 10%; top: 5%;"> Welcome to ALPHA FLASH! </h3>
+    <p class = " w3-myfont" style="position: absolute; top:40%; font-size: 130%;"> -> Learn more about Alphabet Letters! <br>and enhance your skills.</br></p>
+
+     <img src = "Images/train-abc.png" width = "600" height="200"  style = "position:fixed; left: 100%; top:-10%;  ">
+  </div>
+
+<script type="text/javascript">
+	//FOR AUTO SLIDE PICTURES
+	$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1100)
+    .next()
+    .fadeIn(1100)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+</script>
+
+</body>
+</html>

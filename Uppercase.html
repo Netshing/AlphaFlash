@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALPHA FLASH</title>
+<link rel="icon" type="image/png" href="Images/logo.png">
+	<style type="text/css">
+			body {
+   background-image: url("Images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: 215%;
+   
+}
+
+
+.slider{
+	width: 300px; /*Same as width of the large image*/
+
+	position: relative;
+
+	/*Instead of height we will use padding*/
+	padding-top: 400px; /*That helps bring the labels down*/
+	top:300px;
+	margin: 50px auto;
+	
+	/*Lets add a shadow*/
+	box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.75);
+    
+  }
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 18px 0 0 18px;
+	border: 3px solid #999;
+	
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	
+	/*Default style = low opacity*/
+	opacity: 0.6;
+}
+
+.slider label img{
+	display: block;
+  width: 35px;
+  height: 50px;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
+
+/*We are done :)*/
+
+
+	</style>
+</head>
+
+<body>
+  
+
+
+ <img src="Images/child.png" width="700" height="300" style = "position: absolute; left: 30%; top:-4%; "> 
+ 
+<a href="Main.html"><img src = "Images/logo.png" width = "300" height="200" style = "position: absolute; left: 10%; top:5%;  "></a>
+
+<img src="Images/up.gif" style="position: absolute; top:30%; left: 35%;">
+
+   <div class="jumbotron" style=" position:absolute; top:340px; left:35.7%; width: 28%; height:410px; background:linear-gradient(to bottom, #74ebd5 0%, #ACB6E5 100%);box-shadow: 10px 10px 5px grey;">
+     
+  </div>
+
+   <div class="jumbotron" style=" position:absolute; top:120%; left:35.7%; width: 28%; height:435px; background:#8b8682; box-shadow: 10px 10px 5px grey; opacity: 0.5">
+     
+  </div>
+
+<div class="slider">
+
+<audio id="audio" type = "audio/MP3" loop></audio>
+
+	<input type="radio" name="slide_switch" id="id1" onclick="play('UpperA/A.MP3')"/>
+	<label for="id1">
+		<img src="UpperA/UpperA_Test1.png" width="100" height="100" />
+	</label>
+	<img src="UpperA/UpperA_Done.gif"/>
+	 
+	<!--Lets show the second image by default on page load-->
+	<input type="radio" name="slide_switch" id="id2"  onclick="play('UpperB/B.MP3')" />
+	<label for="id2">
+		<img src="UpperB/UpperB_Test1.png" width="100" height="100" />
+	</label>
+	<img src="UpperB/UpperB_Done.gif"/>
+ 
+	
+	<input type="radio" name="slide_switch" id="id3" onclick="play('UpperC/C.MP3')" />
+	<label for="id3">
+		<img src="UpperC/UpperC_Test1.png" width="100" height="100" />
+	</label>
+	<img src="UpperC/UpperC_Done.gif"/>
+	
+	<input type="radio" name="slide_switch" id="id4" onclick="play('UpperD/D.MP3')"/>
+	<label for="id4">
+		<img src="UpperD/UpperD_Test1.png" width="100" height="100"  />
+	</label>
+	<img src="UpperD/UpperD_Done.gif"/>
+	
+  <input type="radio" name="slide_switch" id="id5" onclick="play('UpperE/E.MP3')"/>
+  <label for="id5">
+    <img src="UpperE/UpperE_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperE/UpperE_Done.gif"/>
+  
+  <input type="radio" name="slide_switch" id="id6" onclick="play('UpperF/F.MP3')"/>
+  <label for="id6">
+    <img src="UpperF/UpperF_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperF/UpperF_Done.gif"/>
+  
+    <input type="radio" name="slide_switch" id="id7" onclick="play('UpperG/G.MP3')"/>
+  <label for="id7">
+    <img src="UpperG/UpperG_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperG/UpperG_Done.gif"/>
+
+    <input type="radio" name="slide_switch" id="id8" onclick="play('UpperH/H.MP3')"/>
+  <label for="id8">
+    <img src="UpperH/UpperH_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperH/UpperH_Done.gif"/>
+
+     <input type="radio" name="slide_switch" id="id9" onclick="play('UpperI/I.MP3')"/>
+  <label for="id9">
+    <img src="UpperI/UpperI_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperI/UpperI_Done.gif"/>
+
+   <input type="radio" name="slide_switch" id="id10" onclick="play('UpperJ/J.MP3')"/>
+  <label for="id10">
+    <img src="UpperJ/UpperJ_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperJ/UpperJ_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id11" onclick="play('UpperK/K.MP3')"/>
+  <label for="id11">
+    <img src="UpperK/UpperK_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperK/UpperK_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id12" onclick="play('UpperL/L.MP3')"/>
+  <label for="id12">
+    <img src="UpperL/UpperL_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperL/UpperL_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id13" onclick="play('UpperM/M.MP3')"/>
+  <label for="id13">
+    <img src="UpperM/UpperM_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperM/UpperM_Done.gif"/>
+
+
+  <input type="radio" name="slide_switch" id="id14" onclick="play('UpperN/N.MP3')"/>
+  <label for="id14">
+    <img src="UpperN/UpperN_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperN/UpperN_Done.gif"/>
+
+
+  <input type="radio" name="slide_switch" id="id15" onclick="play('UpperO/O.MP3')"/>
+  <label for="id15">
+    <img src="UpperO/UpperO_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperO/UpperO_Done.gif"/>
+
+
+  <input type="radio" name="slide_switch" id="id16" onclick="play('UpperP/P.MP3')"/>
+  <label for="id16">
+    <img src="UpperP/UpperP_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperP/UpperP_Done.gif"/>
+
+
+
+  <input type="radio" name="slide_switch" id="id17" onclick="play('UpperQ/Q.MP3')"/>
+  <label for="id17">
+    <img src="UpperQ/UpperQ_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperQ/UpperQ_Done.gif"/>
+
+
+
+  <input type="radio" name="slide_switch" id="id18" onclick="play('UpperR/R.MP3')"/>
+  <label for="id18">
+    <img src="UpperR/UpperR_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperR/UpperR_Done.gif"/>
+
+
+  <input type="radio" name="slide_switch" id="id19" onclick="play('UpperS/S.MP3')"/>
+  <label for="id19">
+    <img src="UpperS/UpperS_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperS/UpperS_Done.gif"/>
+
+
+  <input type="radio" name="slide_switch" id="id20" onclick="play('UpperT/T.MP3')"/>
+  <label for="id20">
+    <img src="UpperT/UpperT_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperT/UpperT_Done.gif"/>
+
+<input type="radio" name="slide_switch" id="id21" onclick="play('UpperU/U.MP3')"/>
+  <label for="id21">
+    <img src="UpperU/UpperU_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperU/UpperU_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id22" onclick="play('UpperV/V.MP3')"/>
+  <label for="id22">
+    <img src="UpperV/UpperV_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperV/UpperV_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id23" onclick="play('UpperW/W.MP3')"/>
+  <label for="id23">
+    <img src="UpperW/UpperW_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperW/UpperW_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id24" onclick="play('UpperX/X.MP3')"/>
+  <label for="id24">
+    <img src="UpperX/UpperX_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperX/UpperX_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id25" onclick="play('UpperY/Y.MP3')"/>
+  <label for="id25">
+    <img src="UpperY/UpperY_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperY/UpperY_Done.gif"/>
+
+  <input type="radio" name="slide_switch" id="id26" onclick="play('UpperZ/Z.MP3')"/>
+  <label for="id26">
+    <img src="UpperZ/UpperZ_Test1.png" width="100" height="100"  />
+  </label>
+  <img src="UpperZ/UpperZ_Done.gif"/>
+
+</div>
+
+
+
+<!-- We will use PrefixFree - a script that takes care of CSS3 vendor prefixes
+You can download it from http://leaverou.github.com/prefixfree/ -->
+<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+ function play(sound){
+    var audio = document.getElementById("audio");
+    audio.setAttribute('src', sound);
+    audio.currentTime = 0;
+    audio.play();
+}
+</script>
+</body>
+</html>
